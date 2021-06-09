@@ -1,9 +1,13 @@
 # autohome-car-node
 
 nodejs爬虫，抓取汽车之家网站品牌车系车型数据。包括品牌，车系，年份，车型四个层级。
-品牌以及车系数据来源页面：`https://www.autohome.com.cn/car`
-年代数据：`https://www.autohome.com.cn/3170/sale.html#pvareaid=3311673`
-车型数据来源于接口：`https://www.autohome.com.cn/ashx/series_allspec.ashx?s=${seriesId}&y=${yearId}`
+
+品牌以及车系数据来源页面:[https://www.autohome.com.cn/car](https://www.autohome.com.cn/car)
+
+年代数据:[https://www.autohome.com.cn/3170/sale.html#pvareaid=3311673](https://www.autohome.com.cn/3170/sale.html#pvareaid=3311673)
+
+车型数据来源于接口[https://www.autohome.com.cn/ashx/series_allspec.ashx?s=3170&y=11736](https://www.autohome.com.cn/ashx/series_allspec.ashx?s=3170&y=11736)
+
 主要查考开源项目：`https://github.com/iNuanfeng/node-spider`
 
 ## 使用的node模块
@@ -20,11 +24,15 @@ nodejs爬虫，抓取汽车之家网站品牌车系车型数据。包括品牌�
 
 ## 爬取步骤
 
-   1. 抓取品牌和车系;
-   2. 抓取年份;
-   3. 抓取车型;
-   4. 存入本地json文件;
-   5. 自动存入MongoDB数据库
+1. 抓取品牌和车系
+
+2. 抓取年份
+
+3. 抓取车型
+
+4. 存入本地json文件
+
+5. 自动存入MongoDB数据库
 
 ## 环境要求
 
@@ -38,7 +46,10 @@ nodejs爬虫，抓取汽车之家网站品牌车系车型数据。包括品牌�
 yarn install
 
 #### 启动爬虫，数据存储于data.json
-node app.js
+node app
+
+#### 把data.json转换成csv格式
+node json2csv
 ```
 
 ## 协议
